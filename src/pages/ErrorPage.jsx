@@ -1,7 +1,11 @@
 function ErrorPage() {
     return(
         <>
-        <h2> The Route you entered Does Not Exist!</h2>
+        <div id ="error">
+             <span> Error 404 </span> 
+             <br />
+            <p> The Route you entered Does Not Exist! Try another one!</p>
+        </div>
         
         </>
     )
