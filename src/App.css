@@ -1,0 +1,14 @@
+#links {
+    display: flex;
+    justify-content: space-between; /* This will place equal space between the links */
+}
+  
+#links a {
+    flex: 1;
+    text-align: center; /* This will center the text within each link */
+}
+
+
+
+
+  
