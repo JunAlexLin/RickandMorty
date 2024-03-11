@@ -2,7 +2,7 @@ function ErrorPage() {
     return(
         <>
         <div id ="error">
-             <span> Error 404 </span> 
+             <span> An ERROR Occurred </span> 
              <br />
             <p> The Route you entered Does Not Exist! Try another one!</p>
         </div>
