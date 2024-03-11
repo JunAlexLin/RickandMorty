@@ -59,12 +59,12 @@ const CharacterDetailsPage = () => {
             {characterInfo.gender ? (
                 <> 
                     <div>{errorMessage} </div>
+                    <p>{characterInfo.name}</p>
                     <Card style={{ width: '18rem' }}>
                         <Card.Img variant="top" src={characterInfo.image} />
                         <Card.Body>
-                        <Card.Title>{characterInfo.name}</Card.Title>
                         <Card.Text>
-                            is a {characterInfo.gender} {characterInfo.species} and is currently {characterInfo.status}. 
+                        {characterInfo.name} is a {characterInfo.gender} {characterInfo.species} and is currently {characterInfo.status}. 
                             At the moment, {characterInfo.name} was last seen in {characterInfo.location.name} and is originally from {characterInfo.origin.name}. The first appearance of {characterInfo.name} in the show is in episode {parseInt(characterInfo.episode[0].split('/').pop(), 10)} 
                             . Their most recent appearance is in episode {parseInt(characterInfo.episode[characterInfo.episode.length - 1].split('/').pop(), 10)}.
                         </Card.Text>

@@ -8,6 +8,8 @@ const Favorites = () => {
     const  {favoriteCharacters, setFavoriteCharacters} = useOutletContext()
     const [characterList, setCharacterList] = useState([])
     const [errorMessage, setErrorMessage] = useState("")
+
+    const max_favorite_characters = 8
     
     useEffect(() => {
         const grabCharacters = async () => {
@@ -23,7 +25,7 @@ const Favorites = () => {
                     setCharacterList([]);
                     setErrorMessage("Error fetching favorite characters.");
                 }
-            } else if (favoriteCharacters.length >= 9) {
+            } else if (favoriteCharacters.length >= (max_favorite_characters + 1)) {
                 setErrorMessage(`You can't have more than 8 favorite characters and you currently have ${favoriteCharacters.length}! Go back to the characters list and get rid of one favorite character.`);
             } else {
                 setCharacterList([]);

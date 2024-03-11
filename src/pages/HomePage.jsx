@@ -1,7 +1,7 @@
 function HomePage() {
     return(
         <>
-            <div className = "home_container">
+            <div className= "home_container">
                 <h2>Welcome to the Multiverse of Rick and Morty!</h2>
                 <br/>
                 <p>
