@@ -8,15 +8,16 @@ import { Container, Row, Col } from 'react-bootstrap'; // Make sure to import th
 const CharactersPage = () => {
     const [characterList, setCharacterList] = useState([])
     const  {favoriteCharacters, setFavoriteCharacters} = useOutletContext()
+    const {characterNumber} = useOutletContext();
+    const [coordinates, setCoordinates] = useState('');
+    const [loading, setLoading] = useState(true);
 
     
 
     let lst = []
-    for (let i = 1; i <= 826; i+=1){  //next iteration don't hard code this value 
+    for (let i = 1; i <= characterNumber; i+=1){  //next iteration don't hard code this value 
         lst.push(i)
     }
-
-    //console.log(lst)
 
     useEffect(() => {
         const grabCharacters = async () => {
@@ -32,9 +33,10 @@ const CharactersPage = () => {
 
         grabCharacters();
     }, []); // Empty dependency array means this effect will only run once after the component mounts
+    
+    
 
-    //console.log("YEAH", characterList)
-    //newString = originalString.replace("G", "");
+
     return (
         <>
             <h2> Meet the Characters!</h2>
