@@ -2,9 +2,9 @@ function ErrorPage() {
     return(
         <>
         <div id ="error">
-             <span> An ERROR Occurred </span> 
+             <span> ERROR OCCURRED </span> 
              <br />
-            <p> The Route you entered Does Not Exist! Try another one!</p>
+            <p></p>
         </div>
         
         </>

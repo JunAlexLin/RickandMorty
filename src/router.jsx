@@ -2,10 +2,11 @@ import { createBrowserRouter } from "react-router-dom";
 import App from './App'
 import HomePage from "./pages/HomePage";
 import About from "./pages/About"
-import ErrorPage from "./pages/ErrorPage";
+import NotFound from "./pages/NotFound";
 import CharactersPage from "./pages/CharactersPage";
 import CharacterDetailsPage from "./pages/CharacterDetailsPage";
 import Favorites from "./pages/Favorites"
+import ErrorPage from "./pages/ErrorPage";
 
 const router = createBrowserRouter([
     {
@@ -30,6 +31,9 @@ const router = createBrowserRouter([
             },{
                 path:"/favorites",
                 element: <Favorites />
+            },{
+                path:"*",
+                element: <NotFound />
             }
 
         ],
